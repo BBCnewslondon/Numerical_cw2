@@ -4,6 +4,7 @@ This project implements a numerical solver for the "Crazy Golf" problem, modelin
 
 ## Project Structure
 
+- `cw.py`: Main script to run the solver and generate plots.
 - `src/`: Source code for the physics engine, surface definitions, and solver.
   - `physics.py`: Equations of motion and force calculations.
   - `surfaces.py`: Definitions of the surface functions $z(x,y)$ for Scenarios A, B, and C.
@@ -15,6 +16,12 @@ This project implements a numerical solver for the "Crazy Golf" problem, modelin
   - `Scenario_B.ipynb`: The Obstacle Course.
   - `Scenario_C.ipynb`: The Two-Putt Challenge.
   - `Testing_and_Validation.ipynb`: Validation against known cases.
+- `plots/`: Directory for generated plots.
+
+## Prerequisites
+
+- Python 3.7 or higher
+- Dependencies listed in `requirements.txt`
 
 ## Installation
 
@@ -26,3 +33,27 @@ This project implements a numerical solver for the "Crazy Golf" problem, modelin
 ## Usage
 
 Run the notebooks in the `notebooks/` directory to see the solutions for each scenario.
+
+### Running the Main Script
+
+To run the solver and generate plots, execute:
+
+```bash
+python cw.py
+```
+
+This will solve the scenarios and save plots to the `plots/` directory.
+
+### Testing
+
+Run the unit tests:
+
+```bash
+python -m pytest tests/
+```
+
+Or using unittest:
+
+```bash
+python -m unittest tests/test_cw.py
+```
